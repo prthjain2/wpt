@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea:hover{
+            background-color: dodgerblue;
+        }
+        span:hover{
+            visibility: hidden;
+        }
+        .box{
+            border: 5px solid black;
+            width:400px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Welcome to CDAC, <span>IACSD</span> Please type something in the textarea below.</h1>
+        <table>
+            <tr>
+                <td><h3>Enter text: </h3></td>
+                <td> <textarea id="txt"></textarea></td>
+            </tr>
+        </table><br>
+        <button type="button" onclick="display()">Submit</button>
+        <div id="disp"></div>
+    </div>
+    <script>
+        function display(){
+            var text=document.getElementById('txt').value;
+            document.getElementById('disp').innerHTML="Length of Text: "+text.length;
+        }
+    </script>
+    
+</body>
+</html>
